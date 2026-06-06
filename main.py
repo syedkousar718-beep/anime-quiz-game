@@ -4,6 +4,6 @@ from result import result_page
 
 name, difficulty = home_page()
 
-score = quiz_page(difficulty)
+score, time_taken = quiz_page(difficulty)
 
-result_page(name, difficulty, score)
+result_page(name, difficulty, score, time_taken)

@@ -1,3 +1,6 @@
+
+import time
+
 from question import (
     easy_questions,
     moderate_questions,
@@ -6,6 +9,8 @@ from question import (
 )
 
 def quiz_page(difficulty):
+
+    start_time = time.time()
 
     if difficulty == "Easy":
         questions = easy_questions
@@ -40,7 +45,11 @@ def quiz_page(difficulty):
         else:
             print("❌ Wrong!")
 
-    return score
+        end_time = time.time()
+
+        time_taken = end_time - start_time
+
+    return score, time_taken
 
 
 
